@@ -1,0 +1,28 @@
+<div class = "row" >
+  <div class = "col-md-12">
+    <h2>マイページ</h2>
+    <div class = "col-md-6 offset-3">
+        <h3>ユーザーネーム：<%= @user.user_name %></h3>
+        <h3>メールアドレス：<%= @user.email %></h3>
+    </div>
+    <div class = "col-md-2 offset-10">
+      <%= link_to "編集", edit_public_user_path(@user.id) %>
+    </div>
+    <div class = "col-md-2 offset-2 ">
+      <h2>投稿一覧</h2>
+    </div>
+    <% @posts.each do |post| %>
+    <div class = "col-md-6">
+        <div class = "row">
+            <div class = "col-md-6">
+                <p>画像：<%= image_tag post.image, class: "w-100" %></p>
+            </div>
+            <div class = "col-md-6">
+              <p>タイトル：<%= post.title %></p>
+              <p>説明文：<%= post.introduction %></p>
+            </div>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
