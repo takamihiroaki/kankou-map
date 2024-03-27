@@ -9,11 +9,7 @@
     <p>説明文: <%= post.introduction %></p>
     <p>画像</p>
     <%= link_to public_post_path(post.id) do %>
-      <% if post.image.attached? %>
-        <%= image_tag post.image %>
-      <% else %>
-        <%= image_tag 'no_image' %>
-      <% end %>
+      <%= image_tag post.image %>
     <% end %>
   </div>
 <% end %>
