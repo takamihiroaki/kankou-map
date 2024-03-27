@@ -7,6 +7,13 @@
       <%= post.title %>
     <% end %>  </p>
     <p>説明文: <%= post.introduction %></p>
-    <p>画像: <%= image_tag post.image %></p>
+    <p>画像</p>
+    <%= link_to public_post_path(post.id) do %>
+      <% if post.image.attached? %>
+        <%= image_tag post.image %>
+      <% else %>
+        <%= image_tag 'no_image', size: "200x200" %>
+      <% end %>
+    <% end %>
   </div>
 <% end %>
