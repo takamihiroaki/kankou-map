@@ -17,7 +17,7 @@ class Public::PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc) #created_atは作成日時　descは降順
   end
 
   def show
