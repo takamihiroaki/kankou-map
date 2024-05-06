@@ -1,0 +1,11 @@
+cloud9で修正が終わったら git push までおわらせる
+ssh で デプロイ先へログインする
+下記コマンドを順番に実行する
+
+       cd kankou-map
+   82  kill $(cat tmp/pids/puma.pid)
+   77  git pull origin main
+   78  bundle install --path vendor/bundle --without test development
+   79  bundle exec rails assets:precompile RAILS_ENV=production
+   80  bundle exec rails db:migrate RAILS_ENV=production
+   81  rails s -e production
