@@ -1,4 +1,5 @@
 class Public::PostsController < ApplicationController
+  # ログインしているかどうかを確認
    before_action :authenticate_user!, except: [:index]
 
   def new
