@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2024_03_12_042653) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
-
+# コメント
   create_table "comments", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "post_id", null: false
