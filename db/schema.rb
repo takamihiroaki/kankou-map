@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2024_03_12_042653) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
+# 投稿
   create_table "posts", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "title", null: false
