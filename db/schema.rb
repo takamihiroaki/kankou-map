@@ -89,7 +89,7 @@ ActiveRecord::Schema.define(version: 2024_03_12_042653) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
-
+# ユーザー情報
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
