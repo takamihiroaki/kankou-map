@@ -24,7 +24,7 @@ class Public::SessionsController < Devise::SessionsController
    def configure_sign_in_params
      devise_parameter_sanitizer.permit(:sign_in, keys: [:user_name])
    end
-
+# サインイン後投稿一覧ページへ
   def after_sign_in_path_for(resource)
     public_posts_path
   end
