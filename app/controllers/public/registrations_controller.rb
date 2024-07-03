@@ -59,7 +59,7 @@ class Public::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
+# サインアップ後投稿一覧ページへ
   def after_sign_up_path_for(resource)
     public_posts_path
   end
